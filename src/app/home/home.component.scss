@@ -1,6 +1,6 @@
 body{
     display: flex;
-    height: auto;
+    height: 100%;
     nav{
         width: 15%;
     }
@@ -36,6 +36,12 @@ body{
     }
     main{
         width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    body{
+        height: 100%;
     }
 }
 

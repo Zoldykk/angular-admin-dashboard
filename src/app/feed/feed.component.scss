@@ -32,7 +32,7 @@
     .feed-content{
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-items: center;
         .feed-img{
             display: flex;
@@ -132,3 +132,9 @@
     }
 }
 
+@media screen and (min-width: 1920px){
+    .feed-content{
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
+    }
+
+}
