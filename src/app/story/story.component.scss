@@ -37,13 +37,14 @@
 }
 
 .user-story{
+    height: 100px;
     position: relative;
     display: flex;
     justify-content: center ;
     align-items: center;
         img{
             object-fit: cover;
-            opacity: 0.6;
+            opacity: 0.5;
         }
         fa-icon{
             top: 25px;
