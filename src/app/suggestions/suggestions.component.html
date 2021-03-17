@@ -1,0 +1,25 @@
+<div class="suggestions-container">
+    <header>
+        <h4>Suggestions For You</h4>
+        <a href="#">See All</a>
+    </header>
+
+    <div class="suggestions">
+        <ng-container *ngFor='let user of suggestedUsers'>
+            <div class="users">
+                <div class="user-img">
+                    <img src={{user.userImage}} alt="">
+                </div>
+
+                <div class="info">
+                    <span class="username">{{user.username}}</span>
+                    <span class="social-id">{{user.socialId}}</span>
+                </div>
+
+                <div class="follow-btn-container">
+                    <button (click)='handleClick(user.id)' [ngClass]="user.isFollowed ? 'follow-btn isClicked' : 'follow-btn'">{{user.isFollowed ? 'Followed' : 'Follow'}}</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

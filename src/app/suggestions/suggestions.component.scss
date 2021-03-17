@@ -1,0 +1,86 @@
+.suggestions-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    header{
+        width: 92%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        h4{
+            color: #25396f;
+            letter-spacing: 0.5px;
+        }
+        a{
+            text-decoration: none;
+            color: #a86dd2;
+            font-weight: 500;
+        }
+    }
+    .suggestions{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 240px;
+        width: 92%;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #dfeeff;
+        padding-bottom: 20px;
+        .users{
+            display: flex;
+            align-items: center;
+            .user-img{
+                width: 20%;
+                img{
+                    width: 80%;
+                    height: auto;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    border: 3px solid white;
+
+                }
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                .username{
+                    font-weight: 500;
+                    color: #25396f;
+                    cursor: pointer;
+                }
+                .social-id{
+                    margin: 6px 0px;
+                    color: rgb(143, 142, 142);
+                    font-size: 14px;
+                }
+            }
+
+            .follow-btn-container{
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                height: 35px;
+                .follow-btn{
+                    cursor: pointer;
+                    border-radius: 8px;
+                    padding: 10px 25px;
+                    border: none;
+                    background-color: #a974ff;
+                    color: white;
+                    font-weight: 500;
+                    &:hover{
+                        background-color: #bb95f8;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.isClicked{
+    background-color: #f0f5ff !important;
+    color: #25396f !important;
+}

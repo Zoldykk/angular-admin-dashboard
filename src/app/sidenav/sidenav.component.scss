@@ -1,0 +1,235 @@
+$primaryColor: #a86dd2;
+$iconsPrimaryColor: #a4b6e1;
+
+@mixin flexCenter ($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: direction;
+}
+
+.sidenav{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    .logo{
+        width: 75%;
+        height: 100px;
+        @include flexCenter(column);
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            img{
+                width: 35%;
+                height: auto;
+                border-radius: 50px;
+                margin: 0px 10px;
+                box-shadow: -6px 14px 10px rgb(233, 233, 233);
+            }
+            span{
+                font-size: 20px;
+                font-weight: 500;
+                color: $primaryColor;
+                letter-spacing: 0.5px;
+                .underlined-character{
+                    border-bottom: 2px solid $primaryColor;
+                }
+            }
+        }
+    }
+    .menu{
+        height: 320px;
+        .header{
+            width: 75%;
+            margin: 20px auto;
+            h4{
+                font-weight: 500;
+                color: #25396f;
+            }
+        }
+        ul{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            li{
+                height: 100%;
+                @include flexCenter(column);
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: 0px 9px 10px -13px rgba(133, 133, 133, 0.75);
+                    a{
+                        color: $primaryColor;
+                    }
+                    fa-icon{
+                        color: $primaryColor;
+                    }
+                }
+                a{
+                    flex: 0.7;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: $iconsPrimaryColor;
+                }
+                fa-icon{
+                    font-size: 20px;
+                    color: $iconsPrimaryColor;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .user-panel{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .header {
+            width: 75%;
+            margin: 20px 0px 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h4{
+                font-weight: 500;
+                color: #25396f;
+            }
+            fa-icon{
+                font-weight: 500;
+                color: #25396f;
+                cursor: pointer;
+            }
+        }
+        .user-info{
+            @include flexCenter(column);
+            .user-img {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                margin-right: 5px;
+                img{
+                    width: 50%;
+                    min-width: 45px;
+                    height: auto;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            } 
+            .info{
+                display: flex;
+                flex-direction: column;
+                .username{
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                    color: #25396f;
+                    cursor: pointer;
+                }
+                .social-id{
+                    color: rgb(143, 142, 142);
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.mobile-nav-container{
+    display: none;
+    justify-content: space-between;
+    height: 60px;
+    .logo{
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            img{
+                width: 6%;
+                min-width: 40px;
+                height: auto;
+                border-radius: 50%;
+                margin: 0px 10px;
+                box-shadow: -6px 14px 10px rgb(233, 233, 233);
+            }
+            span{
+                font-size: 20px;
+                font-weight: 500;
+                color: #a86dd2;
+                letter-spacing: 0.5px;
+                .underlined-character{
+                    border-bottom: 2px solid #a86dd2;
+                }
+            }
+        }
+
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        li{
+            margin: 0px 10px;
+        }
+        .bars{
+            color: #a86dd2;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .user{
+            img{
+                width: 45px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .sidenav{
+        display: none;
+        position: absolute;
+        transform: translate(100%, 20%);
+        z-index: 1;
+    }
+    .mobile-nav-container{
+        display: flex !important;
+    }
+}
+
+
+.isAccountOpen{
+    display: none;
+    transition: display 0.5s;
+}
+
+.isNavItemActive{
+    box-shadow: 0px 9px 10px -13px rgba(133, 133, 133, 0.75);
+    fa-icon{
+        color: $primaryColor !important;
+    }
+    a{
+        color: $primaryColor !important;
+    }
+}
+
+.isNavOpen{
+    width: 100%;
+    height: auto;
+    display: flex !important;
+    position: absolute;
+    transform: translate(0%, 19%);
+    z-index: 1;
+    background-color: white;
+    .header, .logo, .user-panel{
+        display: none;
+    }
+}

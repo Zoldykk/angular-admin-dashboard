@@ -1,0 +1,66 @@
+.stories-container{
+    margin: 0 auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border-bottom: 2px solid #dfeeff;
+    .story{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img{
+            width: 65%;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid #b081ff;
+            padding: 3px;
+    
+            &:hover{
+                cursor: pointer;
+            }
+        } 
+        .name{
+            margin-top: 12px;
+            color: #25396f;
+            font-weight: 500;
+            cursor: pointer;
+        } 
+    }
+}
+
+.isSeen{
+    border: 2px solid #b9cde5 !important;
+}
+
+.user-story{
+    position: relative;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+        img{
+            object-fit: cover;
+            opacity: 0.6;
+        }
+        fa-icon{
+            top: 25px;
+            position: absolute;
+            color: white;
+            cursor: pointer;
+        } 
+}
+
+@media screen and (max-width: 768px){
+    .stories-container{
+        overflow-x: scroll !important;
+        justify-content: flex-start;
+
+        .story{
+            min-width: 100px;
+        }
+    }
+}
+

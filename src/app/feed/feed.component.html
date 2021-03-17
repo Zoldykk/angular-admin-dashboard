@@ -1,0 +1,40 @@
+<div class="feed-container">
+    <div class="feed-header">
+        <h4>Feeds</h4>
+
+        <ul>
+            <li>All</li>
+            <li>Following</li>
+            <li>Newest</li>
+            <li class="isActive">Popular</li>
+        </ul>
+    </div>
+
+    <div  class="feed-content">
+        <ng-container *ngFor='let post of getStoredData()'>
+            <div class="feed-post">
+                <div class="feed-img">
+                    <img src={{post.path}} alt="">
+                </div>
+
+                <div class="post-info">
+                    <div class="poster-info">
+                        <img src={{post.userImage}} alt="">
+                        <span class="name">{{post.username}}</span>
+                    </div>
+
+                    <div class="post-options">
+                        <div class="like">
+                            <fa-icon [ngClass]="post.isLiked ? 'isLiked' : ''" (click)='incrementCounter(post.id)' [icon]="faHeart"></fa-icon>
+                            <span class="like-count">{{post.counter}}</span> 
+                        </div>
+                        <div class="comment">
+                            <fa-icon [icon]="faCommentDots"></fa-icon>
+                            <span class="comment-count">18</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

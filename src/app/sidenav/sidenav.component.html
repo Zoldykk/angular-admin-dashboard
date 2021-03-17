@@ -1,0 +1,54 @@
+<div [ngClass]="isNavOpen ? 'sidenav isNavOpen' : 'sidenav'">
+    <div class="logo">
+        <a href="">
+            <img src="assets/images/logo.png" alt="">
+            <span>C<span class="underlined-character">o</span>feed</span>
+        </a>
+    </div>
+
+    <div class="menu">
+        <div class="header"><h4>Menu</h4></div>
+        <ul>
+            <li class="isNavItemActive"><fa-icon [icon]="faHome"></fa-icon><a href="#">Home</a></li>
+            <li><fa-icon [icon]="faCommentDots"></fa-icon><a href="#">Messages</a></li>
+            <li><fa-icon [icon]="faUser"></fa-icon><a href="#">Profile</a></li>
+            <li><fa-icon [icon]="faBookmark"></fa-icon><a href="#">Saved Post</a></li>
+            <li><fa-icon [icon]="faCog"></fa-icon><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="user-panel">
+        <div class="header">
+            <h4>Account</h4>
+            <fa-icon (click)='toggleAccountInfo()' [icon]="faChevronDown"></fa-icon>
+        </div>
+
+        <div [ngClass]="isOpen ? 'isAccountOpen' : 'user-info'">
+            <div class="user-img">
+                <img src="assets/images/profile-2.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <span class="username">Michael</span>
+                <span class="social-id">@michaelsco_</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="mobile-nav-container">
+    <div class="logo">
+        <div class="logo">
+            <a href="">
+                <img src="assets/images/logo.png" alt="">
+                <span>C<span class="underlined-character">o</span>feed</span>
+            </a>
+        </div>
+    </div>
+
+    <ul>
+        <li class="user"><img src="assets/images/profile-2.jpg" alt=""></li>
+        <li (click)='toggleNavBar()' class="bars"><fa-icon [icon]="faBars"></fa-icon></li>
+    </ul>
+</div>

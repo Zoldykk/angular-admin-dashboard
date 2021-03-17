@@ -1,0 +1,22 @@
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    ul{
+        width: 92%;
+        display: flex;
+        & > :first-child{
+            list-style: none;
+        }
+        li{
+            color: #a4b6e1;
+            margin: 0px 10px;
+            font-size: 12.5px;
+            a{
+                text-decoration: none;
+                color: #a4b6e1;
+                font-size: 12.5px;
+            }
+        }
+    }
+}

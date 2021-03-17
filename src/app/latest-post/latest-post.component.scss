@@ -1,0 +1,113 @@
+.latest-post-container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    header{
+        width: 92%;
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0px;
+        h4{
+            color: #25396f;
+            letter-spacing: 0.5px;
+        }
+    }
+    .latest-post-wrapper{
+        width: 92%;
+        height: 200px;
+        background-color: #f5f9ff;
+        border-radius: 15px;
+        border: 2.5px solid white;
+        box-shadow: -12px 14px 10px rgb(235, 235, 235);
+        .latest-post{
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .post-img{
+            width: 50%;
+            img{
+                width: 95%;
+                height: auto;
+                border-radius: 15px;
+                border: 2.5px solid white;
+                cursor: pointer;
+            }
+        }
+        .post-info{
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .post-title{
+                color: #25396f;
+                a{
+                    color: #25396f;
+                    letter-spacing: 0.5px;
+                    text-decoration: none;
+                }
+            }
+            .options{
+                display: flex;
+                justify-content: space-between;
+                .like{
+                    fa-icon{
+                        margin: 0 4px;
+                        font-size: 20px;
+                        color:#a4b6e1;
+                        cursor: pointer;
+                        &:hover{
+                            color: #ff5775;
+                        }
+                    }
+                    .like-count{
+                        font-size: 15px;
+                        color:#a4b6e1;
+                    }
+                }
+                .comment{
+                    fa-icon{
+                        margin: 0 4px;
+                        font-size: 20px;
+                        color:#a4b6e1;
+                        cursor: pointer;
+                        &:hover{
+                            color: #25396f;
+                        }
+                    }
+                    .comment-count{
+                        font-size: 15px;
+                        color:#a4b6e1;
+                    }
+                }
+                .bookmark{
+                    fa-icon{
+                        margin: 0 4px;
+                        font-size: 20px;
+                        color:#a4b6e1;
+                        cursor: pointer;
+                        &:hover{
+                            color: #25396f;
+                        }
+                    }
+                    .bookmark-count{
+                        font-size: 15px;
+                        color:#a4b6e1;
+                    }
+                }
+            }
+        }
+        .post-footer{
+            display: flex;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                color: #a86dd2;
+                font-weight: 500;
+            }
+        }
+    }
+}

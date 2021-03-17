@@ -1,0 +1,134 @@
+.feed-container{
+    display: flex;
+    flex-direction: column;
+    .feed-header{
+        width: 94%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        h4{
+            font-weight: 500;
+            color: #25396f;
+            margin-left: 10px;
+        }
+        ul{
+            width: 80%;
+            max-width: 300px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            li{
+                cursor: pointer;
+                color: #a4b6e1;
+                font-weight: 500;
+                &:hover{
+                    color: #a86dd2;
+                }
+            }
+        }
+    }
+    .feed-content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        justify-items: center;
+        .feed-img{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 88%;
+                height: auto;
+                border-radius: 15px;
+                border: 2.5px solid white;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: transform 0.6s;
+                }
+            }
+        }
+        .post-info{
+            margin: 20px 0px;
+            display: flex;
+            justify-content: center;
+            .poster-info{
+                width: 55%;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 15%;
+                    height: auto;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                .name{
+                    font-weight: 500;
+                    color: #25396f;
+                    margin: 0px 8px;
+                    cursor: pointer;
+                }
+            }
+            .post-options{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 35%;
+                .like{
+                    display: flex;
+                    align-items: center;
+                    fa-icon{
+                        font-size: 25px;
+                        cursor: pointer;
+                        color: #a4b6e1;
+                        &:hover{
+                            color: #ff5775;
+                        }
+                    }
+                    .like-count{
+                        margin-left: 7px;
+                        color: #a4b6e1;
+                    }
+                }
+                .comment{
+                    display: flex;
+                    align-items: center;
+                    margin: 0px 8px;
+                    fa-icon{
+                        cursor: pointer;
+                        font-size: 25px;
+                        color: #a4b6e1;
+                        &:hover{
+                            color: #25396f;
+                        }
+                    }
+                    .comment-count{
+                        margin-left: 7px;
+                        color: #a4b6e1;
+                    }
+                }
+            }     
+        }
+    }
+}
+
+.isLiked{
+    color: #ff5775 !important;
+}
+
+.isActive{
+    color: #a86dd2 !important;
+}
+
+@media screen and (max-width: 768px){
+    .feed-img{
+        img{
+            &:hover{
+                transform: none !important;
+                transition: transform 0.6s;
+            }
+        }
+    }
+}
+
