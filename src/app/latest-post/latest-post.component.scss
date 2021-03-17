@@ -16,13 +16,15 @@
     }
     .latest-post-wrapper{
         width: 92%;
-        height: 200px;
+        height: 240px;
         background-color: #f5f9ff;
         border-radius: 15px;
         border: 2.5px solid white;
         box-shadow: -12px 14px 10px rgb(235, 235, 235);
+        display: flex;
+        flex-direction: column;
         .latest-post{
-            height: 80%;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,6 +109,7 @@
                 text-decoration: none;
                 color: #a86dd2;
                 font-weight: 500;
+                margin-bottom: 20px;
             }
         }
     }

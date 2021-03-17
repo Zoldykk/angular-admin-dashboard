@@ -7,6 +7,7 @@ body{
     main{
         width: 60%;
         background-color: #edf2fc;
+        height: 100%;
     }
     aside{
         width: 30%;
@@ -42,6 +43,10 @@ body{
 @media screen and (min-width: 1920px){
     body{
         height: 100%;
+    }
+
+    main{
+        height: 100vh !important;
     }
 }
 
